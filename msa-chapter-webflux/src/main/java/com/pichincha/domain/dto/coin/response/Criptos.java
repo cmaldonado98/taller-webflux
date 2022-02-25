@@ -1,12 +1,10 @@
-package com.pichincha.dto.coin.response;
+package com.pichincha.domain.dto.coin.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
-
-import java.util.List;
 
 import static lombok.AccessLevel.PRIVATE;
 
@@ -15,7 +13,8 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = PRIVATE)
-public class Coin {
-
-    List<Criptos> Criptos;
+public class Criptos {
+    String Precio;
+    String Nombre;
+    String Id;
 }
