@@ -1,5 +1,6 @@
 package com.pichincha.domain.dto.coin.response;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +15,10 @@ import static lombok.AccessLevel.PRIVATE;
 @NoArgsConstructor
 @FieldDefaults(level = PRIVATE)
 public class Criptos {
+    @JsonProperty("Precio")
     String Precio;
+    @JsonProperty("Nombre")
     String Nombre;
+    @JsonProperty("Id")
     String Id;
 }
