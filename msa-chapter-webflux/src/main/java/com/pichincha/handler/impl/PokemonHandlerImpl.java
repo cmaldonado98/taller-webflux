@@ -11,7 +11,7 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
-import static org.springframework.http.ResponseEntity.ok;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @Component
 @RequiredArgsConstructor
@@ -22,7 +22,7 @@ public class PokemonHandlerImpl implements PokemonHandler {
     @Override
     public Mono<ServerResponse> getAllPokemons(ServerRequest serverRequest) {
         return serverRequest.body(BodyExtractors.toMono(Pokemon.class))
-                .flatMap(pokemonService::getAllPokemons)
+                .flatMap(pokemon -> pokemonService.getAllPokemons())
                 .flatMap(response -> ok().body(BodyInserters.fromValue(response)));
     }
 }
