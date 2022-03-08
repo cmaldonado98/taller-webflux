@@ -8,23 +8,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
+import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Configuration
 @RequiredArgsConstructor
 public class RouterConfiguration {
-
-    private final PropertiesConfiguration propertiesConfiguration;
+    
     private final PokemonHandler pokemonHandler;
 
     @Bean
     public RouterFunction<ServerResponse> routes() {
-        return route().path(propertiesConfiguration.getPokemon().basePath, () ->
-                        route()
-                                .path("/getPokemosRouterFunction", () ->
-                                        route()
-                                                .GET("", pokemonHandler.getAllPokemons())
-                                                .build()))
-                .build();
+        return route(GET("/retrieve-pokemons-router-configuration"), pokemonHandler::getAllPokemons);
     }
 }
