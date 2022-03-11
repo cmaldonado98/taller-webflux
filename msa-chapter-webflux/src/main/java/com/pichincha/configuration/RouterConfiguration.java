@@ -19,6 +19,6 @@ public class RouterConfiguration {
 
     @Bean
     public RouterFunction<ServerResponse> routes() {
-        return route(GET("/retrieve-pokemons-router-configuration"), pokemonHandler::getAllPokemons);
+       return route().GET("/retrieve-pokemons-router-configuration", pokemonHandler::getAllPokemons).build();
     }
 }

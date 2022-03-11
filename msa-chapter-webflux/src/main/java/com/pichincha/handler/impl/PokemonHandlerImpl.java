@@ -21,8 +21,7 @@ public class PokemonHandlerImpl implements PokemonHandler {
 
     @Override
     public Mono<ServerResponse> getAllPokemons(ServerRequest serverRequest) {
-        return serverRequest.body(BodyExtractors.toMono(Pokemon.class))
-                .flatMap(pokemon -> pokemonService.getAllPokemons())
-                .flatMap(response -> ok().body(BodyInserters.fromValue(response)));
+        return pokemonService.getAllPokemons()
+               .flatMap(response -> ok().body(BodyInserters.fromValue(response)));
     }
 }
