@@ -5,6 +5,5 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 public interface CoinHandler {
-
-    Mono<ServerResponse> getAllCoins(ServerRequest serverRequest);
+    Mono<ServerResponse> getCoin(ServerRequest serverRequest);
 }

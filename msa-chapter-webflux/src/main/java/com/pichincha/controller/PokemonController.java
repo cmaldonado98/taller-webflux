@@ -19,5 +19,4 @@ public class PokemonController {
         Mono<Pokemon> pokemon = pokemonService.getAllPokemons();
         return pokemon.map(ResponseEntity::ok);
     }
-
 }
