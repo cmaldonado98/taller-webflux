@@ -1,0 +1,5 @@
+server:
+  port: 8081
+  shutdown: GRACEFUL
+  servlet:
+    context-path: '/retrieve-coin'
