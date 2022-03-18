@@ -18,6 +18,11 @@ public class RouterConfiguration {
 
     @Bean
     public RouterFunction<ServerResponse> routes() {
-        return route().POST("/retrieve-pokemon", pokemonHandler::getPokemon).build();
+        return route().GET("/retrieve-pokemon", pokemonHandler::getPokemon).build();
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> routes2() {
+        return route().GET("/retrieve-skill", pokemonHandler::getSkill).build();
     }
 }

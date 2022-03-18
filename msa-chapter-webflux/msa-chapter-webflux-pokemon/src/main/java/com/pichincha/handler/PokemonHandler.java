@@ -6,4 +6,6 @@ import reactor.core.publisher.Mono;
 
 public interface PokemonHandler {
     Mono<ServerResponse> getPokemon(ServerRequest serverRequest);
+
+    Mono<ServerResponse> getSkill(ServerRequest serverRequest);
 }
