@@ -6,6 +6,7 @@
 	<modules>
 		<module>msa-chapter-webflux-dto</module>
 		<module>msa-chapter-webflux-coin</module>
+		<module>msa-chapter-webflux-pokemon</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
