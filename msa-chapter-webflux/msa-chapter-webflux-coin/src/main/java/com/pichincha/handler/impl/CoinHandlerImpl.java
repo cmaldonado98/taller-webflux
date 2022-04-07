@@ -11,6 +11,7 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
+import static org.springframework.web.reactive.function.BodyInserters.fromValue;
 import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @Component
@@ -20,9 +21,8 @@ public class CoinHandlerImpl implements CoinHandler {
     private final CoinService coinService;
 
     @Override
-    public Mono<ServerResponse> getCoin(ServerRequest serverRequest) {
-        return serverRequest.body(BodyExtractors.toMono(CoinDto.class))
-                .flatMap(coinService::getCoin)
-                .flatMap(response -> ok().body(BodyInserters.fromValue(response)));
+    public Mono<ServerResponse> getCoinById(ServerRequest serverRequest) {
+        return coinService.getCoinById(serverRequest.pathVariable("id")).
+                flatMap(response -> ok().body(fromValue(response)));
     }
 }

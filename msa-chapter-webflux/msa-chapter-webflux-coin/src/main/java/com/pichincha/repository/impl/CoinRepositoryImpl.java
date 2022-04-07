@@ -15,11 +15,11 @@ public class CoinRepositoryImpl implements CoinRepository {
     private final WebClientUtil webClientUtil;
 
     @Override
-    public Mono<CoinDto> getCoin(CoinDto coinDto) {
+    public Mono<CoinDto> getCoinById(String id) {
         return webClientUtil.builder()
                 .build()
                 .get()
-                .uri(URL_COIN.concat(coinDto.getId()))
+                .uri(URL_COIN.concat(id))
                 .retrieve()
                 .bodyToMono(CoinDto.class);
     }
