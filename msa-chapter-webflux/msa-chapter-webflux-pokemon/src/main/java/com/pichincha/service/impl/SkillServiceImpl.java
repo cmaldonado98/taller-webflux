@@ -14,7 +14,7 @@ public class SkillServiceImpl implements SkillService {
     private SkillRepository skillRepository;
 
     @Override
-    public Mono<SkillDto> getSkill(SkillDto skillDto) {
-        return skillRepository.getSkill(skillDto);
+    public Mono<SkillDto> getSkill(String skillId) {
+        return skillRepository.getSkill(skillId);
     }
 }

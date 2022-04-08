@@ -14,7 +14,7 @@ public class PokemonServiceImpl implements PokemonService {
     private PokemonRepository pokemonRepository;
 
     @Override
-    public Mono<PokemonDto> getPokemon (PokemonDto pokemonDto) {
-        return pokemonRepository.getPokemon(pokemonDto);
+    public Mono<PokemonDto> getPokemon (String pokemonId) {
+        return pokemonRepository.getPokemon(pokemonId);
     }
 }

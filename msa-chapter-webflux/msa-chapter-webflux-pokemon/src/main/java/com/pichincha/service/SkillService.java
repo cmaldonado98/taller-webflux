@@ -4,5 +4,5 @@ import com.pichincha.domain.dto.SkillDto;
 import reactor.core.publisher.Mono;
 
 public interface SkillService {
-    Mono<SkillDto> getSkill(SkillDto skillDto);
+    Mono<SkillDto> getSkill(String skillId);
 }

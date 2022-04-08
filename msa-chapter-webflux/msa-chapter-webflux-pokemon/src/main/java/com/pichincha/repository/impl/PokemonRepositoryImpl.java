@@ -3,6 +3,7 @@ package com.pichincha.repository.impl;
 import com.pichincha.domain.dto.PokemonDto;
 import com.pichincha.util.WebClientUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import com.pichincha.repository.PokemonRepository;
 import reactor.core.publisher.Mono;
@@ -11,15 +12,16 @@ import reactor.core.publisher.Mono;
 @Component
 public class PokemonRepositoryImpl implements PokemonRepository {
 
-    private static final String URL_POKEMON = "https://47d1f209-3c16-4ed4-b8d4-21a668b3e00c.mock.pstmn.io/bp-pokemon?id=";
+    @Value("${ws.pokemon.url}")
+    private String URL_POKEMON;
     private final WebClientUtil webClientUtil;
 
     @Override
-    public Mono<PokemonDto> getPokemon(PokemonDto pokemonDto) {
+    public Mono<PokemonDto> getPokemon(String pokemonId) {
         return webClientUtil.builder()
                 .build()
                 .get()
-                .uri(URL_POKEMON.concat(String.valueOf(pokemonDto.getId())))
+                .uri(URL_POKEMON.concat(String.valueOf(pokemonId)))
                 .retrieve()
                 .bodyToMono(PokemonDto.class);
     }

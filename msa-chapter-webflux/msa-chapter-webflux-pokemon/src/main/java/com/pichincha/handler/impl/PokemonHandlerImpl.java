@@ -25,15 +25,13 @@ public class PokemonHandlerImpl implements PokemonHandler {
 
     @Override
     public Mono<ServerResponse> getPokemon(ServerRequest serverRequest) {
-        return serverRequest.body(BodyExtractors.toMono(PokemonDto.class))
-                .flatMap(pokemonService::getPokemon)
+        return pokemonService.getPokemon(serverRequest.pathVariable("pokemonId"))
                 .flatMap(response -> ok().body(BodyInserters.fromValue(response)));
     }
 
     @Override
     public Mono<ServerResponse> getSkill(ServerRequest serverRequest) {
-        return serverRequest.body(BodyExtractors.toMono(SkillDto.class))
-                .flatMap(skillService::getSkill)
+        return skillService.getSkill(serverRequest.pathVariable("skillId"))
                 .flatMap(response -> ok().body(BodyInserters.fromValue(response)));
     }
 }
