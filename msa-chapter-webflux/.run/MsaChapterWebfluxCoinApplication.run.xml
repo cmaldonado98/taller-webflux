@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MsaChapterWebfluxCoinApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="com.pichincha.MsaChapterWebfluxCoinApplication" />
+    <envs>
+      <env name="URL_WS_COIN" value="https://47d1f209-3c16-4ed4-b8d4-21a668b3e00c.mock.pstmn.io/bp-coins?id=" />
+    </envs>
+    <module name="msa-chapter-webflux-coin" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.pichincha.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
