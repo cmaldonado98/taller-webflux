@@ -31,7 +31,7 @@ public class PokemonCoinHandlerTest {
     
     webTestClient
     .get()
-    .uri("/api/pokemon/{id}")
+    .uri("/api/pokemon/{id}","1")
     .exchange()
     .expectStatus()
     .isOk()
