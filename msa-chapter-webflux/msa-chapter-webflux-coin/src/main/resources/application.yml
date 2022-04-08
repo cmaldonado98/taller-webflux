@@ -3,3 +3,7 @@ server:
   shutdown: GRACEFUL
   servlet:
     context-path: '/retrieve-coin'
+
+ws:
+  coin:
+    url: ${URL_WS_COIN}
