@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/msa-chapter-webflux-coin/msa-chapter-webflux-coin.iml" filepath="$PROJECT_DIR$/msa-chapter-webflux-coin/msa-chapter-webflux-coin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa-chapter-webflux-dto/msa-chapter-webflux-dto.iml" filepath="$PROJECT_DIR$/msa-chapter-webflux-dto/msa-chapter-webflux-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa-chapter-webflux-orchestrator/msa-chapter-webflux-orchestrator.iml" filepath="$PROJECT_DIR$/msa-chapter-webflux-orchestrator/msa-chapter-webflux-orchestrator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa-chapter-webflux-pokemon/msa-chapter-webflux-pokemon.iml" filepath="$PROJECT_DIR$/msa-chapter-webflux-pokemon/msa-chapter-webflux-pokemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/taller-chapter-webflux.iml" filepath="$PROJECT_DIR$/.idea/taller-chapter-webflux.iml" />
+    </modules>
+  </component>
+</project>

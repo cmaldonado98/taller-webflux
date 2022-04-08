@@ -18,7 +18,7 @@
     <dependencies>
         <dependency>
             <groupId>com.pichincha</groupId>
-            <artifactId>msa-chapter-webfluxdto</artifactId>
+            <artifactId>msa-chapter-webflux-dto</artifactId>
             <version>0.0.1</version>
         </dependency>
     </dependencies>

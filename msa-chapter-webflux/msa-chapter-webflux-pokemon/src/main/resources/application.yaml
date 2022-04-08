@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
 ws:
   pokemon:
     url: 'https://47d1f209-3c16-4ed4-b8d4-21a668b3e00c.mock.pstmn.io/bp-pokemon?id='
