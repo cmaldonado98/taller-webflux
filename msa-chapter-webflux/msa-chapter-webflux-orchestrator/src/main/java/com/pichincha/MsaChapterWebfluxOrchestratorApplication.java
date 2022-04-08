@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiPokemonsApplication {
+public class MsaChapterWebfluxOrchestratorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiPokemonsApplication.class, args);
+		SpringApplication.run(MsaChapterWebfluxOrchestratorApplication.class, args);
 	}
 
 }

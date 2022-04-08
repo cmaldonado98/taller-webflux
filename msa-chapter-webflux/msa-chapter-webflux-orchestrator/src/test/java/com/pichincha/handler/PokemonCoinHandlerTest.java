@@ -27,8 +27,7 @@ public class PokemonCoinHandlerTest {
     this.webTestClient = WebTestClient.bindToRouterFunction(routerConfiguration.routes()).build();
     pokemonCoin=PokemonCoin.builder().build();
     when(pokemonCoinService.getPokemonCoin(ID))
-    .thenReturn(Mono.just(pokemonCoin));
-    
+    .thenReturn(Mono.just(pokemonCoin));    
     webTestClient
     .get()
     .uri("/api/pokemon/{id}","1")
@@ -37,5 +36,5 @@ public class PokemonCoinHandlerTest {
     .isOk()
     .expectBody(PokemonCoin.class)
     .value(actual -> assertEquals(pokemonCoin, actual));
-  }
+  }    
 }
