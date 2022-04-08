@@ -14,7 +14,7 @@ public class CoinServiceImpl implements CoinService {
     private CoinRepository coinRepository;
 
     @Override
-    public Mono<CoinDto> getCoin(CoinDto coinDto) {
-        return coinRepository.getCoin(coinDto);
+    public Mono<CoinDto> getCoinById(String id) {
+        return coinRepository.getCoinById(id);
     }
 }

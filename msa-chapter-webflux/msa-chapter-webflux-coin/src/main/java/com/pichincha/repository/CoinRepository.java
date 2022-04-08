@@ -4,5 +4,5 @@ import com.pichincha.domain.dto.CoinDto;
 import reactor.core.publisher.Mono;
 
 public interface CoinRepository {
-    Mono<CoinDto> getCoin(CoinDto coinDto);
+    Mono<CoinDto> getCoinById(String id);
 }

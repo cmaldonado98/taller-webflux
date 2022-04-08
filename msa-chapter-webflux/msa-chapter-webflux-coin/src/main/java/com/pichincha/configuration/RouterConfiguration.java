@@ -18,6 +18,6 @@ public class RouterConfiguration {
 
     @Bean
     public RouterFunction<ServerResponse> routes() {
-        return route().POST("/retrieve-coin", coinHandler::getCoin).build();
+        return route().GET("/retrieve-coin/{id}", coinHandler::getCoinById).build();
     }
 }
